@@ -9,7 +9,7 @@ label {
 
 label ::placeholder {
     font-size: 12px;
-    color: var(--gray-mode-color);
+    color: var(--gray-light-mode-color);
 }
 
 label input {
@@ -18,14 +18,13 @@ label input {
     margin-bottom: 1.2em;
     width: 25em;
     height: 1.4em;
-    border: 1px solid var(--gray-light-mode-color);
+    border: 0.2px solid var(--gray-light-mode-color);
     border-radius: 2.1px;
 }
 
 label input:focus {
     transform: scale(1.1);
-    transition: transform 0.3s;
-    background-color: var(--hover-color);
+    transition: transform 0.2s;
 }
 
 label input[type="number"]::-webkit-outer-spin-button,
@@ -68,3 +67,4 @@ button[type="submit"] {
         margin-left: 9.8%;
     }
 }
+

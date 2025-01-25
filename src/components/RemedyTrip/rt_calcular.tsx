@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './remedy_trip_style.css';
+import './rt_style.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'; 
 
-const RemedyTrip: React.FC = () => {
+const RT: React.FC = () => {
     const [remedyName, setRemedyName] = useState('');
     const [dailyUnits, setDailyUnits] = useState('');
     const [pillQuantity, setPillQuantity] = useState('');
@@ -25,9 +25,9 @@ const RemedyTrip: React.FC = () => {
             <label className='ft_input_number'>
                 Quantidade de comprimidos na cartela <input type="number" value={pillQuantity} onChange={(e) => setPillQuantity(e.target.value)} min="1" placeholder="Deve ser maior que 0" />
             </label>
-            <button type="submit">Adicionar</button>
+            <button type="submit">Adicionar <i className="bi bi-trash"></i> </button>
         </form>
     );
 };
 
-export default RemedyTrip;
+export default RT;

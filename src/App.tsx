@@ -1,7 +1,7 @@
 import './App.css';
 import Footer from './components/Footer/footer';
 import Header from './components/Header/header';
-import RemedyTrip from './components/RemedyTrip/remedy_trip';
+import RTList from './components/RemedyTripList/rt_list'; 
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <main>
         <Header />
         <section>
-          <RemedyTrip />
+          <RTList /> 
         </section>
         <Footer />
       </main>
