@@ -6,8 +6,8 @@ import RTList from './components/RemedyTripList/rt_list';
 function App() {
   return (
     <>
+      <Header />
       <main>
-        <Header />
         <section>
           <RTList /> 
         </section>

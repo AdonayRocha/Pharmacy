@@ -53,4 +53,36 @@ padding: 2em;
 color: #888;
 }
 
+.flex-container {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens no topo */
+  gap: 2em; /* Espaçamento entre os itens */
+}
 
+.flex-item {
+  flex: 1; /* Cada item ocupará o mesmo espaço */
+}
+
+.rt-list-ul {
+  max-height: 400px; /* Defina a altura máxima para a lista */
+  overflow-y: auto; /* Adicione barra de rolagem vertical */
+}
+
+.flex-item form {
+  max-width: 50%; /* Defina a largura máxima do formulário */
+}
+
+@media (max-width: 720px) {
+  .flex-container {
+    flex-direction: column; /* Muda a direção dos itens para coluna */
+  }
+
+  .flex-item {
+    width: 100%; /* Cada item ocupará 100% da largura */
+  }
+
+  .rt-list-ul {
+    max-height: none; /* Remove a altura máxima para a lista */
+    overflow-y: visible; /* Remove barra de rolagem vertical */
+  }
+}
