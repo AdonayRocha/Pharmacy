@@ -20,18 +20,6 @@ const Header: React.FC = () => {
                 >
                     Home
                 </li>
-                <li
-                    className={`nav-item ${active === 'trip' ? 'active' : ''}`}
-                    onClick={() => setActive('trip')}
-                >
-                    Trip
-                </li>
-                <li
-                    className={`nav-item ${active === 'contact' ? 'active' : ''}`}
-                    onClick={() => setActive('contact')}
-                >
-                    Contact
-                </li>
             </ul>
         </nav>
     );

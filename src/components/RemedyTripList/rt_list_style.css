@@ -1,37 +1,27 @@
 .flex-container {
     display: flex;
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 1em; /* Reduzindo o espaçamento entre os itens */
+    align-items: flex-start;
+    gap: 1em;
+    margin: 50px;
+    margin-bottom: 50px;
+    text-align: left;
 }
 
 .flex-item {
-    flex: 1; /* Cada item ocupará o mesmo espaço */
+    flex: 1;
 }
 
 .rt-list-ul {
-    max-height: 400px; /* Defina a altura máxima para a lista */
-    overflow-y: auto; /* Adicione barra de rolagem vertical */
-}
-
-@media (max-width: 720px) {
-    .flex-container {
-        flex-direction: column; /* Muda a direção dos itens para coluna */
-    }
-
-    .flex-item {
-        width: 100%; /* Cada item ocupará 100% da largura */
-    }
-
-    .rt-list-ul {
-        max-height: none; /* Remove a altura máxima para a lista */
-        overflow-y: visible; /* Remove barra de rolagem vertical */
-    }
+    max-height: 400px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow-y: auto; 
 }
 
 label.rt-input-text, label.rt-input-number {
     display: block;
     margin-bottom: 0.2em;
-    align-items: flex;
     text-align: left;
     padding-top: 0.1em;
     padding-right: 10em;
@@ -45,10 +35,10 @@ label.rt-input-text ::placeholder, label.rt-input-number ::placeholder {
 label.rt-input-text input, label.rt-input-number input {
     display: flex;
     text-align: center;
-    margin-bottom: 1em; /* Reduzindo o espaçamento inferior */
+    margin-bottom: 1em;
     width: 25em;
     height: 1.4em;
-    border: 0.2px solid var(--gray-light-mode-color);
+    border: none;
     border-radius: 2.1px;
 }
 
@@ -63,26 +53,12 @@ label.rt-input-number input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-button[type="submit"] {
+button[type="submit"], button[type="button"] {
     display: block;
-    margin-bottom: 1em; /* Reduzindo o espaçamento inferior */
-    align-items: flex;
-    width: 21.4em;
-    height: 1.8em;
-    padding-top: 0.1em;
+    margin-bottom: 1em;
     text-align: center;
+    width: 21.4em;
     background-color: var(--positive-color);
-}
-
-button[type="button"] {
-    display: block;
-    margin-bottom: 1em; /* Reduzindo o espaçamento inferior */
-    align-items: flex;
-    width: 21.4em;
-    height: 1.8em;
-    padding-top: 0.1em;
-    text-align: center;
-    background-color: var(--secondary-color);
 }
 
 ul.rt-list-ul {
@@ -93,21 +69,24 @@ ul.rt-list-ul {
 ul.rt-list-ul li.rt-list-li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0.3em 0; /* Reduzindo o espaçamento entre os itens */
-    padding: 0.5em;
-    border: 1px solid var(--gray-light-mode-color);
-    border-radius: 5px;
+    align-items: left;
+    text-align: left;
+    margin: 0.3em 0;
+    padding: 1em; 
+    border: none;
+    border-radius: 2px;
+    background-color: var(--gray-light-mode-color);
 }
 
 button.rt-remove-btn {
-    margin-left: 0.3em; /* Reduzindo o espaçamento à esquerda */
+    margin-left: 0.3em;
     background: none;
     border: none;
     cursor: pointer;
-    background-color: var(--negative-color);
-    color: var(--text-color);
+    color: var(--negative-color);
 }
+
+
 
 @media (max-width: 720px) {
     label.rt-input-text, label.rt-input-number {
@@ -119,16 +98,28 @@ button.rt-remove-btn {
 
     label.rt-input-text input, label.rt-input-number input {
         width: 80%;
-        border-top: none;
-        border-right: none;
-        border-left: none;
-        border: 50%;
+        border: none;
     }
 
     button[type="submit"], button[type="button"] {
         width: 83%;
-        margin-bottom: 10%; 
+        margin-bottom: 10%;
         align-self: center;
         margin-left: 9.8%;
+        background-color: var(--positive-color);
+    }
+
+    .flex-container {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+
+    .rt-list-ul {
+        max-height: none;
+        overflow-y: visible;
     }
 }
