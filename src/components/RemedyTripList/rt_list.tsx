@@ -41,7 +41,11 @@ const RTList: React.FC = () => {
     const handleDelete = (index: number) => {
         const newRemedies = remedies.filter((_, i) => i !== index);
         setRemedies(newRemedies);
-        updateTravelCalculations(newRemedies);
+        
+        // Verifica se existe dia de viagem
+        if (travelDays !== null && travelDays > 0) {
+            updateTravelCalculations(newRemedies);
+        }
     };
 
     const handleTravelCalculation = () => {
